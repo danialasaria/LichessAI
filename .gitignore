@@ -1,0 +1,17 @@
+# Ignore Python cache files
+__pycache__/
+
+# Ignore virtual environment directory
+venv/
+
+# Ignore system files (specific to macOS)
+.DS_Store
+
+# Ignore Python bytecode
+*.pyc
+
+# Ignore the dragon binary
+dragon-osx
+
+# Ignore log files
+*.log

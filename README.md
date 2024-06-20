@@ -1,1 +1,1 @@
-# PersonalChessAI
+# LichessAI
