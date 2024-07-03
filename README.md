@@ -12,6 +12,7 @@
 - [Intro](#intro)
 - [Install](#install)
 - [Usage](#usage)
+- [Parameters](#parameters)
 - [License](#license)
 
 
