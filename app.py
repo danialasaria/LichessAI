@@ -1,4 +1,3 @@
-import random
 import subprocess
 import time
 
@@ -16,7 +15,7 @@ def find_executable(executable):
     return result.stdout.decode('utf-8').strip()
 
 CHROMEDRIVER_PATH = find_executable('chromedriver')
-STOCKFISH_PATH = find_executable('stockfish')
+ENGINE_PATH = './dragon-osx'
 
 LICHESS_URL = 'https://lichess.org/'
 WINDOW_WIDTH = 1000
@@ -24,18 +23,18 @@ WINDOW_HEIGHT = 800
 WINDOW_POSITION_X = 0
 WINDOW_POSITION_Y = 0
 
-SECONDS_LOADING_LICHESS = 2
+SECONDS_LOADING_LICHESS = .5
 SECONDS_LOADING_SIGN_IN = 2
 SECONDS_LOADING_PAIRING_PAGE = 2
 SECONDS_LICHESS_UPDATING_WEBPAGE_TITLE = .5
 SECONDS_OPEN_AFTER_GAME_ENDS = 300
 
+ANONYMOUS_MODE = True
 LICHESS_USERNAME = ''
 LICHESS_PASSWORD = ''
 TIME_CONTROL = '3+0'
 ENGINE_ANALYSIS_TIME = .1
 DISTANCE_BETWEEN_TOP_OF_SCREEN_AND_LICHESS = 184
-ANONYMOUS_MODE = True
 
 class ChessEngine:
     def __init__(self, path):
@@ -78,6 +77,7 @@ def log_in(driver, username, password):
     password_field.send_keys(Keys.RETURN)
 
 def select_time_control(driver, time_control):
+    print("selecting time control!")
     button_selector = f'div[data-id="{time_control}"]'
     time_control_button = driver.find_element(By.CSS_SELECTOR, button_selector)
     time_control_button.click()
@@ -163,12 +163,12 @@ def main():
     service = webdriver.chrome.service.Service(CHROMEDRIVER_PATH)
     driver = webdriver.Chrome(service=service)
 
-    driver.get(LICHESS_URL)
     set_fixed_window_size(driver, WINDOW_WIDTH, WINDOW_HEIGHT)
     driver.set_window_position(WINDOW_POSITION_X, WINDOW_POSITION_Y)
+    driver.get(LICHESS_URL)
     time.sleep(SECONDS_LOADING_LICHESS)
 
-    engine = ChessEngine(STOCKFISH_PATH)
+    engine = ChessEngine(ENGINE_PATH)
 
     if not ANONYMOUS_MODE:
         log_in(driver, LICHESS_USERNAME, LICHESS_PASSWORD)
