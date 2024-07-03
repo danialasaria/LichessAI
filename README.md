@@ -38,6 +38,11 @@ source venv/bin/activate
 pip3 install -r requirements.txt
 ```
 
+### Download ChromeDriver
+Find the chromedriver that matches your computer and visit the corresponding link to download. ChromeDriver works as a bridge between Selenium and Chrome enabling automated control of the browser.
+```bash
+https://googlechromelabs.github.io/chrome-for-testing/
+```
 
 ## Usage
 
