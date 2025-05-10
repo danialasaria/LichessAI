@@ -8,6 +8,7 @@
 [![Selenium](https://img.shields.io/badge/selenium-green)](https://www.selenium.dev/)
 [![PyAutoGUI](https://img.shields.io/badge/pyautogui-yellow)](https://pyautogui.readthedocs.io/en/latest/)
 
+[▶️ Watch on GitHub](https://github.com/user-attachments/assets/73f7ed01-dc31-4d15-80c0-e1ca62965a6a) • [Original Tweet](https://x.com/danialasaria/status/1804209157379363174)
 
 - [Intro](#intro)
 - [Install](#install)
