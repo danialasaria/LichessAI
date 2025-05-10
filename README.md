@@ -8,6 +8,8 @@
 [![Selenium](https://img.shields.io/badge/selenium-green)](https://www.selenium.dev/)
 [![PyAutoGUI](https://img.shields.io/badge/pyautogui-yellow)](https://pyautogui.readthedocs.io/en/latest/)
 
+![lichessAI-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/40123395-86b0-4bce-a46e-1bdc8d78a787)
+
 [▶️ Watch on GitHub](https://github.com/user-attachments/assets/73f7ed01-dc31-4d15-80c0-e1ca62965a6a) • [Original Tweet](https://x.com/danialasaria/status/1804209157379363174)
 
 - [Intro](#intro)
